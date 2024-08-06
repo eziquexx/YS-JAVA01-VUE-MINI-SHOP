@@ -1,10 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <HeaderArea />
+    <router-view />
+    <FooterArea />
+  </div>
 </template>
+
+
+<script>
+import HeaderArea from './layouts/HeaderArea.vue';
+import FooterArea from './layouts/FooterArea.vue';
+
+export default {
+  components: {
+    HeaderArea,
+    FooterArea,
+  },
+  setup() {
+
+  },
+};
+</script>
 
 <style>
 #app {
